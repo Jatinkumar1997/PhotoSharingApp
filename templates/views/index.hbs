@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Photo Sharing App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        <p>Upload Photo</p>
+
+        <form id="upload" action="/gallery/uploadphoto" enctype="multipart/form-data" method="POST"> 
+            <input id="imagename" type="text" value="" placeholder="Image Name"/>
+            <input id="imagedesc" type="text" value="" placeholder="Description"/>
+            <input id="fileupload" type="file" name="myFile" />
+            <input type="submit" value="Upload a Photo"/>
+        </form>
+        <br>
+        <button id="viewphotos" value="View Photos">View Photos</button>
+        <button id="viewphotos" value="View Photos">Share a Photo</button>
+        <p id="message-1"></p>
+        <table id="message-2">
+            
+        </table>
+        
+    </div>
+
+    {{>footer}}
+    <script src="/js/app3.js" ></script>
+</body>
+
+</html>
